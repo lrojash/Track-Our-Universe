@@ -1,17 +1,39 @@
-console.log('works')
 document.body.style.zoom = "25%";
 const API_KEY = 'TW2hym5fprpzfSEc15t1hI9zu59tLvI8tbCG22Zy'
 
 const API_URL_SOLAR_DATA = 'https://api.le-systeme-solaire.net/rest/bodies/'
 const API_NASA =`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`
 
+// get data from API
 const getSolar = async() => {
     try{
         const response = await axios.get(API_URL_SOLAR_DATA)
-        console.log(response.data.bodies[0])
+        const bodies = response.data.bodies
+        let planets = []
+        // console.log(bodies[0].isPlanet)
+        for(let i=0; i < bodies.length; i++) {
+          
+          if(bodies[i].isPlanet === true) {
+            planets.push(bodies[i])
+          }
+        }
+       return planets
     } catch(error) {
         console.log(error)
     }
 }
 
 window.onload = getSolar
+
+
+/******************************************************************** */
+/******************************************************************** */
+/******************************************************************** */
+/******************************************************************** */
+/******************************************************************** */
+
+/*
+class Planets
+  constructor:
+    name: string
+*/
