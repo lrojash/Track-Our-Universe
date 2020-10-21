@@ -5,12 +5,12 @@ const API_URL_SOLAR_DATA = 'https://api.le-systeme-solaire.net/rest/bodies/'
 const API_NASA =`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`
 
 // get data from API
-const getSolar = async() => {
+const getSolar = async(event) => {
+    //console.log(planet)
     try{
+        let planet = event.target.id.toString()
         const response = await axios.get(API_URL_SOLAR_DATA)
-        // console.log(response.data)
-        // console.log(getPlanet(response))
-        getPlanetData(response)
+        getPlanetData(response, planet)
     } catch(error) {
         console.log(error)
     }
@@ -18,29 +18,26 @@ const getSolar = async() => {
 
 // matches the name of the planet with the body from 
 // the api
-const getPlanetData = (data) => {
+const getPlanetData = (data, name) => {
     const planets = data.data.bodies
     for(let i=0; i < planets.length; i++) {
-        if(planets[i].isPlanet === true) {
-            console.log('works')
+        if( planets[i].englishName === name) {
+            console.log(planets[i])
         }
     }
 }
 
-// gets planet selected name
-const getPlanet = (e) => {
-        return e.target.id
-}
-
 // queries
-const jupiter = document.querySelector('#jupiter')
-const saturn = document.querySelector('#saturn')
-const uranus = document.querySelector('#uranus')
-const neptune = document.querySelector('#neptune')
+const jupiter = document.querySelector('#Jupiter')
+const saturn = document.querySelector('#Saturn')
+const uranus = document.querySelector('#Uranus')
+const neptune = document.querySelector('#Neptune')
+
 
 
 // Event Listener
-jupiter.addEventListener('click', getPlanet)
-saturn.addEventListener('click', getPlanet)
-uranus.addEventListener('click', getPlanet)
-neptune.addEventListener('click', getPlanet)
+// outer
+jupiter.addEventListener('click', getSolar)
+saturn.addEventListener('click', getSolar)
+uranus.addEventListener('click', getSolar)
+neptune.addEventListener('click', getSolar)

@@ -2,37 +2,41 @@ document.body.style.zoom = "25%";
 
 const API_KEY = 'TW2hym5fprpzfSEc15t1hI9zu59tLvI8tbCG22Zy'
 const API_URL_SOLAR_DATA = 'https://api.le-systeme-solaire.net/rest/bodies/'
-//const API_NASA =`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`
-const space = document.getElementsByClassName('space')
+const API_NASA =`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`
 
-// EventListener
-// const clicked = () => {
-//     for(let i=1; i < space.length; i++) {
-//         space[i].addEventListener('click', () => {
-//             console.log(space[i].id)
-//         })
-//     }
-// }
-// clicked()
-const mercury = document.querySelector('#mercury')
-const venus = document.querySelector('#venus')
-const earth = document.querySelector('#earth')
-const mars = document.querySelector('#mars')
+// get data from API
+const getSolar = async(event) => {
+    //console.log(planet)
+    try{
+        let planet = event.target.id.toString()
+        const response = await axios.get(API_URL_SOLAR_DATA)
+        getPlanetData(response, planet)
+    } catch(error) {
+        console.log(error)
+    }
+}
 
-// console.log(mercury)
-// console.log(venus)
-// console.log(earth)
-// console.log(mars)
+// matches the name of the planet with the body from 
+// the api
+const getPlanetData = (data, name) => {
+    const planets = data.data.bodies
+    for(let i=0; i < planets.length; i++) {
+        if( planets[i].englishName === name) {
+            console.log(planets[i])
+        }
+    }
+}
 
-mercury.addEventListener('click', () => {
-    console.log('works: mercury')     
-})
-venus.addEventListener('click', () => {
-    console.log('works: venus')     
-})
-earth.addEventListener('click', () => {
-    console.log('works: earth')     
-})
-mars.addEventListener('click', () => {
-    console.log('works: mars')     
-})
+
+
+
+const mercury = document.querySelector('#Mercury')
+const venus = document.querySelector('#Venus')
+const earth = document.querySelector('#Earth')
+const mars = document.querySelector('#Mars')
+
+
+mercury.addEventListener('click', getSolar)
+venus.addEventListener('click', getSolar)
+earth.addEventListener('click', getSolar)
+mars.addEventListener('click', getSolar)

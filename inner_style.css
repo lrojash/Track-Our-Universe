@@ -32,25 +32,25 @@ ul {
     color: white;
     margin-top: 50px;
 }
-#mercury {
+#Mercury {
     grid-column: 1/ span 2;
     /* border: 2px solid white; */
     align-self: center;
     margin: 200px 200px 0px 0px;
 }
-#venus {
+#Venus {
     grid-column: 3/ span 2;
     /* border: 2px solid white; */
     align-self: center;
     margin: 200px 200px 0px 200px;
 }
-#earth {
+#Earth {
     grid-column: 5/ span 2;
     /* border: 2px solid white; */
     align-self: center;
     margin: 200px 100px 0px 400px;
 }
-#mars{
+#Mars{
     grid-column: 7/span 2;
     /* border: 2px solid white; */
     align-self: center;

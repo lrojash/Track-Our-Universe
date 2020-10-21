@@ -33,25 +33,25 @@ ul {
     margin-top: 50px;
     position: absolute;
 }
-#jupiter {
+#Jupiter {
     grid-column: 1/ span 2;
     /* border: 2px solid white; */
     align-self: center;
     margin: 600px 0px 0px 0px;
 }
-#saturn {
+#Saturn {
     grid-column: 3/ span 2;
     /* border: 2px solid white; */
     align-self: center;
     margin: 350px 200px 0px 450px;
 }
-#uranus {
+#Uranus {
     grid-column: 5/ span 2;
     /* border: 2px solid white; */
     align-self: right;
     margin: -75px 0px 0px 800px;
 }
-#neptune{
+#Neptune{
     grid-column: 7/span 2;
     /* border: 2px solid white; */
     align-self: center;
