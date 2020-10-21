@@ -42,18 +42,18 @@ ul {
     grid-column: 3/ span 2;
     /* border: 2px solid white; */
     align-self: center;
-    margin: 0px 200px 0px 200px;
+    margin: 200px 200px 0px 200px;
 }
 #earth {
     grid-column: 5/ span 2;
     /* border: 2px solid white; */
     align-self: center;
-    margin: 0px 200px 0px 200px;
+    margin: 200px 100px 0px 400px;
 }
 #mars{
     grid-column: 7/span 2;
     /* border: 2px solid white; */
     align-self: center;
-    margin: 0px 0px 0px 150px;
+    margin: 125px 0px 0px 700px;
 }
 

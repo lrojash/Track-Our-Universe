@@ -37,7 +37,7 @@ ul {
     grid-column: 1/ span 2;
     /* border: 2px solid white; */
     align-self: center;
-    margin: 0px 200px 0px 0px;
+    margin: 600px 0px 0px 0px;
 }
 #saturn {
     grid-column: 3/ span 2;
@@ -48,13 +48,13 @@ ul {
 #uranus {
     grid-column: 5/ span 2;
     /* border: 2px solid white; */
-    align-self: center;
-    margin: 0px 0px 120px 200px;
+    align-self: right;
+    margin: -75px 0px 0px 800px;
 }
 #neptune{
     grid-column: 7/span 2;
     /* border: 2px solid white; */
     align-self: center;
-    margin: 0px 0px 20px -200px;
+    margin: 100px 0px 20px 1000px;
 }
 
