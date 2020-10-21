@@ -1,0 +1,59 @@
+h1 {
+    color: rgb(173, 167, 167);
+    text-align: center;
+    font-size: 75px;
+}
+body {
+    color: black;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    /* border: 1px solid red */
+}
+
+nav {
+    color: white;
+    list-style-type: none;
+    text-align: center;
+    margin: 30px 0px;
+    font-size: 20px;
+}
+ul {
+    display: inline;
+    padding: 0px 75px 0px 75px;
+    margin: 0px 0px 50px 0px;
+    text-decoration: underline;
+}
+
+.space {
+    display: grid;
+    grid-template-columns: repeat(9, 100px [col-start]);
+    grid-template-rows: repeat(2, 0px [row-start]);
+    color: white;
+    margin-top: 50px;
+}
+#mercury {
+    grid-column: 1/ span 2;
+    /* border: 2px solid white; */
+    align-self: center;
+    margin: 200px 200px 0px 0px;
+}
+#venus {
+    grid-column: 3/ span 2;
+    /* border: 2px solid white; */
+    align-self: center;
+    margin: 0px 200px 0px 200px;
+}
+#earth {
+    grid-column: 5/ span 2;
+    /* border: 2px solid white; */
+    align-self: center;
+    margin: 0px 200px 0px 200px;
+}
+#mars{
+    grid-column: 7/span 2;
+    /* border: 2px solid white; */
+    align-self: center;
+    margin: 0px 0px 0px 150px;
+}
+
