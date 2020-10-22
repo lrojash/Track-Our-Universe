@@ -53,8 +53,12 @@ var displayData = function displayData(planet) {
   var resultWrapper = document.createElement('div');
   resultWrapper.className = 'info-result';
   var textInfo = document.createElement('h2');
-  textInfo.className = 'info';
+  textInfo.className = 'planet';
   textInfo.innerText = planet.englishName;
+  var listInfo = document.createElement('li');
+  listInfo.className = 'planet-info';
+  listInfo.innerText = "Gravity: ".concat(planet.gravity, "(m/s^2) \n                        Mean Radius: ").concat(planet.meanRadius, "(km) \n                        Number of Moons: ").concat(planet.moons.length, " \n                        Escape Velocity: ").concat(planet.escape, "(m/s)\n                        Orbit: ").concat(planet.sideralOrbit, "(Earth Days)\n                        Rotation: ").concat(planet.sideralRotation, "(hours)");
+  textInfo.appendChild(listInfo);
   resultWrapper.appendChild(textInfo);
   display.appendChild(resultWrapper);
 }; // create the list of objects to be displayed

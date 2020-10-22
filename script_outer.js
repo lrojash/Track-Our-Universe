@@ -1,4 +1,4 @@
-document.body.style.zoom = "25%";
+document.body.style.zoom = "20%";
 
 const API_KEY = 'TW2hym5fprpzfSEc15t1hI9zu59tLvI8tbCG22Zy'
 const API_URL_SOLAR_DATA = 'https://api.le-systeme-solaire.net/rest/bodies/'
@@ -33,9 +33,20 @@ const displayData = (planet) => {
     let resultWrapper = document.createElement('div')
     resultWrapper.className = 'info-result'
     let textInfo = document.createElement('h2')
-    textInfo.className = 'info'
+    textInfo.className = 'planet'
     textInfo.innerText = planet.englishName
+    
+    let listInfo = document.createElement('li')
+    listInfo.className='planet-info'
+    listInfo.innerText= `Gravity: ${planet.gravity}(m/s^2) 
+                        Mean Radius: ${planet.meanRadius}(km) 
+                        Number of Moons: ${planet.moons.length} 
+                        Escape Velocity: ${planet.escape}(m/s)
+                        Orbit: ${planet.sideralOrbit}(Earth Days)
+                        Rotation: ${planet.sideralRotation}(hours)`
 
+
+    textInfo.appendChild(listInfo)
     resultWrapper.appendChild(textInfo)
     display.appendChild(resultWrapper)
 }

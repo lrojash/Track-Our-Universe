@@ -1,22 +1,28 @@
 h1 {
-    color: rgb(173, 167, 167);
+    color: rgb(241, 241, 241);
     text-align: center;
     font-size: 75px;
 }
 body {
-    color: black;
-    background-color: black;
+    color: rgb(190, 187, 187);
     height: 100%;
     width: 100%;
+    background-image: url("/images/galaxy.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
     /* border: 1px solid red */
 }
 
 nav {
-    color: white;
+    color: rgb(229, 226, 226);
     list-style-type: none;
     text-align: center;
     margin: 30px 0px;
-    font-size: 20px;
+    font-size: 25px;
+}
+ul {
+    color: rgb(229, 226, 226);
 }
 ul {
     display: inline;
@@ -25,15 +31,21 @@ ul {
     text-decoration: underline;
 }
 .information{
-    border: 2px solid red;
+    background-color: rgba(52, 52, 52, 0);
+    font-size: 30px;
+    color: rgb(229, 226, 226);
     height: auto;
     width: 500px;
     position: absolute;
     text-align: center;
-    margin-left: 80%;
-    margin-top: 42%;
+    margin-left: 90%;
+    margin-top: 37%;
 }
-
+li.planet-info{
+    list-style-type: none;
+    padding: 25px;
+    font-size: 25px;
+}
 .space {
     display: grid;
     grid-template-columns: repeat(9, 100px [col-start]);
@@ -41,6 +53,7 @@ ul {
     color: white;
     margin-top: 50px;
     position: absolute;
+    opacity: .92;
 }
 #Jupiter {
     grid-column: 1/ span 2;
