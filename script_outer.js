@@ -50,7 +50,6 @@ const displayData = (planet) => {
     resultWrapper.appendChild(textInfo)
     display.appendChild(resultWrapper)
 }
-// create the list of objects to be displayed
 
 
 
@@ -59,7 +58,7 @@ const jupiter = document.querySelector('#Jupiter')
 const saturn = document.querySelector('#Saturn')
 const uranus = document.querySelector('#Uranus')
 const neptune = document.querySelector('#Neptune')
-const box = document.querySelector('.information')
+
 
 
 // Event Listener
