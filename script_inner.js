@@ -38,6 +38,7 @@ const displayData = (planet) => {
     
     let listInfo = document.createElement('li')
     listInfo.className='planet-info'
+    noMoons(planet)
     listInfo.innerText= `Gravity: ${planet.gravity}(m/s^2) 
                         Mean Radius: ${planet.meanRadius}(km) 
                         Number of Moons: ${planet.moons.length} 
@@ -51,7 +52,12 @@ const displayData = (planet) => {
     display.appendChild(resultWrapper)
 }
 
-
+// handling planets with no moons
+const noMoons = (planet) => {
+    if(planet.moons === null) {
+        planet.moons = ''
+    }
+}
 
 
 const mercury = document.querySelector('#Mercury')
