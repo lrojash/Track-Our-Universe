@@ -2,7 +2,7 @@ document.body.style.zoom = "20%";
 
 const API_KEY = 'TW2hym5fprpzfSEc15t1hI9zu59tLvI8tbCG22Zy'
 const API_URL_SOLAR_DATA = 'https://api.le-systeme-solaire.net/rest/bodies/'
-const API_NASA =`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`
+
 
 // get data from API
 const getSolar = async(event) => {
