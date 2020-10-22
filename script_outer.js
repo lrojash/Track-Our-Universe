@@ -10,7 +10,7 @@ const getSolar = async(event) => {
     try{
         let planet = event.target.id.toString()
         const response = await axios.get(API_URL_SOLAR_DATA)
-        getPlanetData(response, planet)
+        displayData(getPlanetData(response, planet))
     } catch(error) {
         console.log(error)
     }
@@ -22,17 +22,33 @@ const getPlanetData = (data, name) => {
     const planets = data.data.bodies
     for(let i=0; i < planets.length; i++) {
         if( planets[i].englishName === name) {
-            console.log(planets[i])
+            return planets[i]
+
         }
     }
 }
+const displayData = (planet) => {
+    document.querySelector('.information').innerText = ""
+    let display = document.querySelector('.information')
+    let resultWrapper = document.createElement('div')
+    resultWrapper.className = 'info-result'
+    let textInfo = document.createElement('h2')
+    textInfo.className = 'info'
+    textInfo.innerText = planet.englishName
+
+    resultWrapper.appendChild(textInfo)
+    display.appendChild(resultWrapper)
+}
+// create the list of objects to be displayed
+
+
 
 // queries
 const jupiter = document.querySelector('#Jupiter')
 const saturn = document.querySelector('#Saturn')
 const uranus = document.querySelector('#Uranus')
 const neptune = document.querySelector('#Neptune')
-
+const box = document.querySelector('.information')
 
 
 // Event Listener
