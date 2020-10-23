@@ -35,6 +35,11 @@ h2 {
     margin-top: 75px;
     padding: 20px;
 }
+button {
+    border-radius: 10%;
+    position: absolute;
+    bottom: 0px;
+}
 #space{
     height: 100%;
     width: 100%;
@@ -219,7 +224,16 @@ h2 {
       360deg);
     }
   }
+.star {
+    height: 2px;
+    width: 2px;
+    position: absolute;
+    border-radius: 100%;
+    /* border: 2px solid rgb(34, 29, 29); */
+    background-color: rgba(138, 138, 138, 0.26);
+    opacity: .5;
 
+}
 .stars {
     height: 2px;
     width: 2px;

@@ -20,5 +20,14 @@ const positionStar = (star) => {
     star.style.left = x + '%'
     star.style.top = y + '%'
 }
-
 createStars()
+
+const button = document.getElementById('stop')
+button.addEventListener('click',() => {
+    let animation = document.getElementsByClassName('stars')
+    console.log(animation)
+    for(let i =0; i < animation.length; i++) {
+        animation[i].remove('stars')
+    }
+} )
+
