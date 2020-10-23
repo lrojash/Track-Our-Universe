@@ -223,6 +223,7 @@ h2 {
 .stars {
     height: 1px;
     width: 1px;
+    position: absolute;
     border-radius: 100%;
     /* border: 2px solid rgb(34, 29, 29); */
     background-color: black;
