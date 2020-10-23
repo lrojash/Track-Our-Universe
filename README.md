@@ -5,7 +5,7 @@ The project will display the scaled down version of the solar system. The planet
 
 
 ## Getting Started
-The page will load and display the solar system. The user will see the relative orbital speeds of the planets compared to Mercury (as that is the fastes orbiting planet). The user can then select which section of planets they would like more information on. The size of the images are scaled to Jupiter for the outer planets and the inner planets to Mercury.
+The page will load and display the solar system. The user will see the relative orbital speeds of the planets compared to Mercury (as that is the fastes orbiting planet). The user can then select which section of planets they would like more information on. The size of the images are scaled to Jupiter for the outer planets and the inner planets to Mercury. There is a 'twinkling-star' feature on all the pages that can be turned off with the button on the bottom left of the page. 
 ![](sampleInfo.png)
 ## API's Used
 [Solar System OpenData](https://api.le-systeme-solaire.net/rest/bodies/) - The API will provide the information relating to every object in the solar system.

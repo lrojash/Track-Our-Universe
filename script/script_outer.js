@@ -73,6 +73,14 @@ const positionStar = (star) => {
 
 createStars()
 
+const button = document.getElementById('stop')
+button.addEventListener('click',() => {
+    let animation = document.getElementsByClassName('stars')
+    console.log(animation)
+    for(let i =0; i < animation.length; i++) {
+        animation[i].remove('stars')
+    }
+} )
 
 // queries
 const jupiter = document.querySelector('#Jupiter')

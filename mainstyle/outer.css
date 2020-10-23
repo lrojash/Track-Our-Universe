@@ -28,6 +28,11 @@ ul {
     margin: 0px 0px 50px 0px;
     text-decoration: underline;
 }
+button {
+    border-radius: 10%;
+    position: absolute;
+    bottom: -10px;
+}
 .information{
     background-color: rgba(52, 52, 52, 0);
     font-size: 30px;
@@ -76,6 +81,16 @@ li.planet-info{
     /* border: 2px solid white; */
     align-self: center;
     margin: 100px 0px 20px 1000px;
+}
+.star {
+    height: 2px;
+    width: 2px;
+    position: absolute;
+    border-radius: 100%;
+    /* border: 2px solid rgb(34, 29, 29); */
+    background-color: rgba(138, 138, 138, 0.26);
+    opacity: .5;
+
 }
 .stars {
     height: 3px;
