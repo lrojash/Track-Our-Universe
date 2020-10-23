@@ -77,4 +77,22 @@ li.planet-info{
     align-self: center;
     margin: 100px 0px 20px 1000px;
 }
+.stars {
+    height: 3px;
+    width: 2px;
+    position: absolute;
+    border-radius: 100%;
+    /* border: 2px solid rgb(34, 29, 29); */
+    background-color: rgba(138, 138, 138, 0.26);
+    opacity: .5;
+    animation-name: blink;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+@-webkit-keyframes blink {
+    0% {background-color: rgba(138, 138, 138, 0.315);}
+    50% {background-color: rgba(255, 255, 255, 0.938);}
+    100% {background-color: rgba(255, 255, 255, 0.315);}
+}
+
 
