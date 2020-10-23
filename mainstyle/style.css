@@ -219,3 +219,19 @@ h2 {
       360deg);
     }
   }
+
+.stars {
+    height: 1px;
+    width: 1px;
+    border-radius: 100%;
+    /* border: 2px solid rgb(34, 29, 29); */
+    background-color: black;
+    opacity: .8;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@-webkit-keyframes blink {
+    from {background-color:black;}
+    to {background-color:white;}
+}
