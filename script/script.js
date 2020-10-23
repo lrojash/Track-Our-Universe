@@ -1,9 +1,9 @@
-document.body.style.zoom = "25%"
+document.body.style.zoom = "100%"
 
 let body = document.querySelector('body')
 
 // will create stars
-const createStars = () => {
+const createStars = () => { 
     for(let i=0; i < 250; i++) {
         setTimeout(() => {
             let star = document.createElement('div')

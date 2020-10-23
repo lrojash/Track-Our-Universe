@@ -1,4 +1,4 @@
-document.body.style.zoom = "20%";
+document.body.style.zoom = "100%";
 
 
 const API_URL_SOLAR_DATA = 'https://api.le-systeme-solaire.net/rest/bodies/'
