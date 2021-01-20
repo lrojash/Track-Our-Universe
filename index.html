@@ -1,19 +1,28 @@
 <!DOCTYPE html>
- <html lang="en">
- <head> 
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="mainstyle/style.css">
-     <title>Solar</title>
- </head>
- <body>   
-   <h1>The Solar System</h1>
-   <nav>
-      <a href="index.html"><ul>Main</ul></a>
-      <a href="inner.html"><ul>Inner Planets</ul></a>
-      <a href="outer.html"><ul>Outer Planets</ul></a>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="mainstyle/style.css">
+   <title>Solar</title>
+</head>
+
+<body>
+   <h1 className="main-title">The Solar System</h1>
+   <nav className="nav-main">
+      <a href="index.html">
+         <ul>Main</ul>
+      </a>
+      <a href="inner.html">
+         <ul>Inner Planets</ul>
+      </a>
+      <a href="outer.html">
+         <ul>Outer Planets</ul>
+      </a>
    </nav>
-   <h2>Click on the links above to get more information about the planets in our solar system. </br>
+   <h2 className="main-content">Click on the links above to get more information about the planets in our solar system.
+      </br>
       The diagram shows the planets(dots) orbiting, scaled down to the orbital speed of mercury times 10.</br>
       All starting at the same position.The planet images are scaled to Jupiter</br>
       for the inner planets, and Mercury for the inner planets. Future updates will show the planets</br>
@@ -45,8 +54,8 @@
          <div class="planet" id='nept'></div>
       </div>
    </div>
-   <button id='stop'>Stop Animation</button>
- </body>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="script/script.js""></script>
+   <button className="animation-button" id='stop'>Stop Animation</button>
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="script/script.js""></script>
  </html>

@@ -4,12 +4,12 @@ const API_URL_SOLAR_DATA = 'https://api.le-systeme-solaire.net/rest/bodies/'
 
 
 // get data from API
-const getSolar = async(event) => {
-    try{
+const getSolar = async (event) => {
+    try {
         let planet = event.target.id.toString()
         const response = await axios.get(API_URL_SOLAR_DATA)
         displayData(getPlanetData(response, planet))
-    } catch(error) {
+    } catch (error) {
         console.log(error)
     }
 }
@@ -18,8 +18,8 @@ const getSolar = async(event) => {
 // the api
 const getPlanetData = (data, name) => {
     const planets = data.data.bodies
-    for(let i=0; i < planets.length; i++) {
-        if( planets[i].englishName === name) {
+    for (let i = 0; i < planets.length; i++) {
+        if (planets[i].englishName === name) {
             return planets[i]
 
         }
@@ -33,11 +33,11 @@ const displayData = (planet) => {
     let textInfo = document.createElement('h2')
     textInfo.className = 'planet'
     textInfo.innerText = planet.englishName
-    
+
     let listInfo = document.createElement('li')
-    listInfo.className='planet-info'
+    listInfo.className = 'planet-info'
     noMoons(planet)
-    listInfo.innerText= `Gravity: ${planet.gravity}(m/s^2) 
+    listInfo.innerText = `Gravity: ${planet.gravity}(m/s^2) 
                         Mean Radius: ${planet.meanRadius}(km) 
                         Number of Moons: ${planet.moons.length} 
                         Escape Velocity: ${planet.escape}(m/s)
@@ -52,7 +52,7 @@ const displayData = (planet) => {
 
 // handling planets with no moons
 const noMoons = (planet) => {
-    if(planet.moons === null) {
+    if (planet.moons === null) {
         planet.moons = ''
     }
 }
@@ -60,14 +60,14 @@ let body = document.querySelector('body')
 
 // will create stars
 const createStars = () => {
-    for(let i=0; i < 100; i++) {
+    for (let i = 0; i < 100; i++) {
         setTimeout(() => {
             let star = document.createElement('div')
             star.className = 'stars'
             positionStar(star)
             body.appendChild(star)
         }, 4000)
-    } 
+    }
 }
 // will position the elements at random location
 const positionStar = (star) => {
@@ -80,13 +80,13 @@ const positionStar = (star) => {
 createStars()
 
 const button = document.getElementById('stop')
-button.addEventListener('click',() => {
+button.addEventListener('click', () => {
     let animation = document.getElementsByClassName('stars')
     console.log(animation)
-    for(let i =0; i < animation.length; i++) {
+    for (let i = 0; i < animation.length; i++) {
         animation[i].remove('stars')
     }
-} )
+})
 
 
 const mercury = document.querySelector('#Mercury')

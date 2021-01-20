@@ -54,6 +54,7 @@ li.planet-info{
     /* border: 2px solid white; */
     align-self: center;
     margin: 200px 200px 0px 0px;
+    
 }
 #Venus {
     grid-column: 3/ span 2;
@@ -66,6 +67,7 @@ li.planet-info{
     /* border: 2px solid white; */
     align-self: center;
     margin: 200px 100px 0px 400px;
+    
 }
 #Mars{
     grid-column: 7/span 2;
@@ -105,3 +107,40 @@ button {
     50% {background-color: rgba(255, 255, 255, 0.938);}
     100% {background-color: rgba(255, 255, 255, 0.315);}
 }
+
+
+@-moz-keyframes move-map {
+    0% {
+      background-position: -849px 0; }
+  
+    100% {
+      background-position: 0 0; } }
+  
+  @-webkit-keyframes move-map {
+    0% {
+      background-position: 0 0; }
+    100% {
+      background-position: -849px 0; }
+  }
+  
+  
+  @-o-keyframes move-map {
+    0% {
+      background-position: -849px 0; }
+  
+    100% {
+      background-position: 0 0; } }
+  
+  @-ms-keyframes move-map {
+    0% {
+      background-position: -849px 0; }
+  
+    100% {
+      background-position: 0 0; } }
+  
+  @keyframes move-map {
+    0% {
+      background-position: -849px 0; }
+  
+    100% {
+      background-position: 0 0; } }

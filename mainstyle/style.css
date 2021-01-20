@@ -229,7 +229,6 @@ button {
     width: 2px;
     position: absolute;
     border-radius: 100%;
-    /* border: 2px solid rgb(34, 29, 29); */
     background-color: rgba(138, 138, 138, 0.26);
     opacity: .5;
 
@@ -239,7 +238,6 @@ button {
     width: 2px;
     position: absolute;
     border-radius: 100%;
-    /* border: 2px solid rgb(34, 29, 29); */
     background-color: rgba(138, 138, 138, 0.26);
     opacity: .5;
     animation-name: blink;
