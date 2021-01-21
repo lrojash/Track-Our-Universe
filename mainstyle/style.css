@@ -1,56 +1,50 @@
 body {
-    color: rgb(190, 187, 187);
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: auto;
     background-image: url("/images/galaxy.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
 
+    /* display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    justify-content: center; */
+    display: flex;
+    flex-direction: column;
 }
-h1 {
-    color: rgb(241, 241, 241);
-    text-align: left;
-    font-size: 75px;
+.main {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    align-items: center;
+    justify-items: center;
 }
-nav {
-    color: rgb(229, 226, 226);
-    list-style-type: none;
-    text-align: left;
-    margin: -30px 0px 0px -75px;
-    font-size: 25px;
+.main-title {
+    color: white;
+    font-size: 4em;
+    text-align: center;
 }
-ul {
-    display: inline;
-    color: rgb(229, 226, 226);
-    padding: 0px 75px 0px 75px;
-    margin: 0px 0px 50px 0px;
-    text-decoration: underline;
+.nav-main{
+    display: flex;
+    text-align: center;
 }
-h2 {
-    color: rgb(229, 226, 226);
-    width: auto;
-    height: auto;
-    font-size: 15px;
-    text-align: left;
-    margin-top: 75px;
-    padding: 20px;
+a {
+    color: white;
+    font-size: 1.5em;
 }
-button {
-    border-radius: 10%;
-    position: absolute;
-    bottom: 0px;
+.main-content {
+    color: white;
+    text-align: justify;
 }
-#space{
-    height: 100%;
-    width: 100%;
+/* .space {
+    height: 5em;
+    width: 5em;
     display: flex;
     position: absolute;
     align-items: center;
     justify-content: center;
-    bottom: 0%;
-    left: 20%;
-
+    pointer-events: none;
 }
+
 #sun{
     height: 2px;
     width: 2px;
@@ -248,4 +242,4 @@ button {
     0% {background-color: rgba(138, 138, 138, 0.315);}
     50% {background-color: rgba(255, 255, 255, 0.938);}
     100% {background-color: rgba(255, 255, 255, 0.315);}
-}
+} */
