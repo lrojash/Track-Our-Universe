@@ -2,7 +2,6 @@
 body {
     height: 100vh;
     width: auto;
-    /* background-image: url("/images/galaxy.jpeg"); */
     background-image: url('../images/galaxy.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
