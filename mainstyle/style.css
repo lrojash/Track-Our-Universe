@@ -2,7 +2,8 @@
 body {
     height: 100vh;
     width: auto;
-    background-image: url("./images/galaxy.jpeg");
+    /* background-image: url("./images/galaxy.jpeg"); */
+    background-image: url("http:https://lrojash.github.io/Track-Our-Universe/galaxy.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
