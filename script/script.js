@@ -3,15 +3,15 @@
 let body = document.querySelector('body')
 
 // will create stars
-const createStars = () => { 
-    for(let i=0; i < 250; i++) {
+const createStars = () => {
+    for (let i = 0; i < 250; i++) {
         setTimeout(() => {
             let star = document.createElement('div')
             star.className = 'stars'
             positionStar(star)
             body.appendChild(star)
         }, 4000)
-    } 
+    }
 }
 // will position the elements at random location
 const positionStar = (star) => {
@@ -23,11 +23,7 @@ const positionStar = (star) => {
 createStars()
 
 const button = document.getElementById('stop')
-button.addEventListener('click',() => {
-    let animation = document.getElementsByClassName('stars')
-    console.log(animation)
-    for(let i =0; i < animation.length; i++) {
-        animation[i].remove('stars')
-    }
-} )
+button.addEventListener('click', () => {
+    document.querySelectorAll(".stars").forEach(star => star.remove())
+})
 
