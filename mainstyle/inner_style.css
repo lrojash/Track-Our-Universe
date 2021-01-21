@@ -142,7 +142,7 @@ button {
   width: 140px;
 }
 
-@-moz-keyframes move-map {
+/* @-moz-keyframes move-map {
   0% {
     background-position: -849px 0; }
 
@@ -220,4 +220,4 @@ button {
       background-position: -849px 0; }
   
     100% {
-      background-position: 0 0; } }
+      background-position: 0 0; } } */
