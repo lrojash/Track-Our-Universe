@@ -1,16 +1,15 @@
+body {
+    color: rgb(190, 187, 187);
+    height: 100vh;
+    width: auto;
+    background-image: url("../images/galaxy.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 h1 {
     color: rgb(241, 241, 241);
     text-align: center;
     font-size: 75px;
-}
-body {
-    color: rgb(190, 187, 187);
-    height: 100%;
-    width: 100%;
-    background-image: url("../images/galaxy.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-
 }
 nav {
     color: rgb(229, 226, 226);
@@ -30,12 +29,7 @@ ul {
     background-color: rgba(52, 52, 52, 0);
     font-size: 30px;
     color: rgb(229, 226, 226);
-    height: auto;
-    width: 500px;
-    position: absolute;
     text-align: center;
-    margin-left: 30%;
-    margin-top: 10%;
 }
 li.planet-info{
     list-style-type: none;
@@ -44,43 +38,17 @@ li.planet-info{
 }
 .space {
     display: grid;
-    grid-template-columns: repeat(9, 100px [col-start]);
-    grid-template-rows: repeat(2, 0px [row-start]);
+    grid-template-columns: auto auto auto auto;
     color: white;
-    margin-top: 11%;
+    align-items: center;
 }
-#Mercury {
-    grid-column: 1/ span 2;
-    /* border: 2px solid white; */
-    align-self: center;
-    margin: 200px 200px 0px 0px;
-    
-}
-#Venus {
-    grid-column: 3/ span 2;
-    /* border: 2px solid white; */
-    align-self: center;
-    margin: 200px 200px 0px 200px;
-}
-#Earth {
-    grid-column: 5/ span 2;
-    /* border: 2px solid white; */
-    align-self: center;
-    margin: 200px 100px 0px 400px;
-    
-}
-#Mars{
-    grid-column: 7/span 2;
-    /* border: 2px solid white; */
-    align-self: center;
-    margin: 125px 0px 0px 700px;
-}
+
 .star {
     height: 2px;
     width: 2px;
     position: absolute;
     border-radius: 100%;
-    /* border: 2px solid rgb(34, 29, 29); */
+
     background-color: rgba(138, 138, 138, 0.26);
     opacity: .5;
 
@@ -91,17 +59,127 @@ button {
     bottom: 0px;
 }
 .stars {
-    height: 2px;
-    width: 1.5px;
-    position: absolute;
-    border-radius: 100%;
-    /* border: 2px solid rgb(34, 29, 29); */
-    background-color: rgba(138, 138, 138, 0.26);
-    opacity: .5;
-    animation-name: blink;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
+  height: 2px;
+  width: 1.5px;
+  position: absolute;
+  border-radius: 100%;
+  background-color: rgba(138, 138, 138, 0.26);
+  opacity: .5;
+  animation-name: blink;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
 }
+.planet {
+  border-radius: 50%;
+  position: relative;
+}
+.planet:before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: -40px 10px 70px 10px rgba(0,0,0,0.5) inset;
+  z-index: 2;
+}
+
+.planet:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+}
+
+#Mercury {
+  -webkit-transform-style: preserve-3d;
+  background: url('../../images/flat_mercury.jpeg') repeat-x;
+  background-size: auto 100%;
+  height: 280px;
+  width: 280px;
+  -webkit-animation: move-map 30s infinite linear;
+  -moz-animation: move-map 30s infinite linear;
+  -o-animation: move-map 30s infinite linear;
+  -ms-animation: move-map 30s infinite linear;
+  animation: move-map 30s infinite linear;
+  background: radial-gradient(circle at center, )
+}
+#Venus {
+  background: url('../../images/flat_venus.jpg') repeat-x;
+  background-size: auto 100%;
+  -webkit-animation: move-map 30s infinite linear;
+  -moz-animation: move-map 30s infinite linear;
+  -o-animation: move-map 30s infinite linear;
+  -ms-animation: move-map 30s infinite linear;
+  animation: move-map 30s infinite linear;
+  height: 260px;
+  width: 260px;
+}
+#Earth {
+  background: url('../../images/flat_earth.jpeg') repeat-x;
+  background-size: auto 100%;
+  -webkit-animation: move-map 30s infinite linear;
+  -moz-animation: move-map 30s infinite linear;
+  -o-animation: move-map 30s infinite linear;
+  -ms-animation: move-map 30s infinite linear;
+  animation: move-map 30s infinite linear;
+  height: 280px;
+  width: 280px;
+}
+#Mars {
+  background: url('../../images/flat_mars.jpeg') repeat-x;
+  background-size: auto 100%;
+  -webkit-animation: move-map 30s infinite linear;
+  -moz-animation: move-map 30s infinite linear;
+  -o-animation: move-map 30s infinite linear;
+  -ms-animation: move-map 30s infinite linear;
+  animation: move-map 30s infinite linear;
+  height: 140px;
+  width: 140px;
+}
+
+@-moz-keyframes move-map {
+  0% {
+    background-position: -849px 0; }
+
+  100% {
+    background-position: 0 0; } }
+
+@-webkit-keyframes move-map {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: -849px 0; }
+}
+
+
+@-o-keyframes move-map {
+  0% {
+    background-position: -849px 0; }
+
+  100% {
+    background-position: 0 0; } }
+
+@-ms-keyframes move-map {
+  0% {
+    background-position: -849px 0; }
+
+  100% {
+    background-position: 0 0; } }
+
+@keyframes move-map {
+  0% {
+    background-position: -849px 0; }
+
+  100% {
+    background-position: 0 0; } }
+
+
 @-webkit-keyframes blink {
     0% {background-color: rgba(138, 138, 138, 0.315);}
     50% {background-color: rgba(255, 255, 255, 0.938);}

@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="mainstyle/inner_style.css">
     <link rel="stylesheet" href="mainstyle/planets/earth.css">
-    <title>Solar</title>    
+    <title>Solar</title>
 </head>
-<h1>Inner Planets</h1>
-<nav>
-    <a href="index.html"><ul>Main</ul></a>
-    <a href="inner.html"><ul>Inner Planets</ul></a>
-    <a href="outer.html"><ul>Outer Planets</ul></a>
- </nav>
+
 <body>
+    <h1 class="inner-title">Inner Planets</h1>
+    <nav>
+        <a href="index.html">
+            <ul>Main</ul>
+        </a>
+        <a href="inner.html">
+            <ul>Inner Planets</ul>
+        </a>
+        <a href="outer.html">
+            <ul>Outer Planets</ul>
+        </a>
+    </nav>
     <section class="space">
         <figure class='planet' id='Mercury'></figure>
         <figure class='planet' id='Venus'></figure>
         <figure class='planet' id='Earth'></figure>
         <figure class='planet' id='Mars'></figure>
-        <section class="information"></section>
     </section>
+    <section class="information"></section>
     <button id='stop'>Stop Animation</button>
 </body>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="script/script_inner.js"></script>
+
 </html>
