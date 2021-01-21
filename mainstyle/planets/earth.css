@@ -10,7 +10,7 @@
 
 #Mercury {
   -webkit-transform-style: preserve-3d;
-  background: url('/images/flat_mercury.jpeg') repeat-x;
+  background: url('../../images/flat_mercury.jpeg') repeat-x;
   background-size: auto 100%;
   height: 280px;
   width: 280px;
@@ -22,7 +22,7 @@
   background: radial-gradient(circle at center, )
 }
 #Venus {
-  background: url('/images/flat_venus.jpg') repeat-x;
+  background: url('../../images/flat_venus.jpg') repeat-x;
   background-size: auto 100%;
   -webkit-animation: move-map 30s infinite linear;
   -moz-animation: move-map 30s infinite linear;
@@ -36,7 +36,7 @@
 }
 #Earth {
   -webkit-transform-style: preserve-3d;
-  background: url('/images/flat_earth.jpeg') repeat-x;
+  background: url('../../images/flat_earth.jpeg') repeat-x;
   background-size: auto 100%;
   -webkit-animation: move-map 30s infinite linear;
   -moz-animation: move-map 30s infinite linear;
@@ -48,7 +48,7 @@
   margin-left: 45em;
 }
 #Mars {
-  background: url('/images/flat_mars.jpeg') repeat-x;
+  background: url('../../images/flat_mars.jpeg') repeat-x;
   background-size: auto 100%;
   -webkit-animation: move-map 30s infinite linear;
   -moz-animation: move-map 30s infinite linear;
