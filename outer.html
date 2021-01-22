@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="mainstyle/outer.css">
     <title>Solar</title>
 </head>
-<h1>Outer Planets</h1>
-<nav>
-    <a href="index.html"><ul>Main</ul></a>
-    <a href="inner.html"><ul>Inner Planets</ul></a>
-    <a href="outer.html"><ul>Outer Planets</ul></a>
- </nav>
+
 <body>
+    <h1>Outer Planets</h1>
+    <nav>
+        <a href="index.html">
+            <ul>Main</ul>
+        </a>
+        <a href="inner.html">
+            <ul>Inner Planets</ul>
+        </a>
+        <a href="outer.html">
+            <ul>Outer Planets</ul>
+        </a>
+    </nav>
     <section class="space">
-        <div class="space planets" ><img id="Jupiter" src="images/jupiter.png" alt="picture of jupiter" width="500" height="500"></div>
-        <div class="space planets" ><img id="Saturn" src="images/saturn.png" alt="picture of saturn" width="416" height="275"></div>
-        <div class="space planets" ></div><img  id="Uranus" src="images/uranus.png" alt="picture of uranus" width="181" height=""></div>
-        <div class="space planets" ><img id="Neptune"src="images/neptune.png" alt="picture of neptune" width="176" height="176"></div>
-        <section class="information"></section>
+        <figure class='planet' id='Jupiter'></figure>
+        <figure class='planet' id='Saturn'></figure>
+        <figure class='planet' id='Uranus'></figure>
+        <figure class='planet' id='Neptune'></figure>
     </section>
-    <button id='stop'>Stop Animation</button>
+    <section class="information"></section>
+    <button class="animation-button" id='stop'>Stop Stars</button>
 </body>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="script/script_outer.js""></script>

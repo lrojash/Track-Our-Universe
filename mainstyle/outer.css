@@ -5,11 +5,13 @@ h1 {
 }
 body {
     color: rgb(190, 187, 187);
-    height: 100vh;
+    height: 120vh;
     width: auto;
     background-image: url("../images/galaxy.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
 }
 
 nav {
@@ -26,21 +28,12 @@ ul {
     margin: 0px 0px 50px 0px;
     text-decoration: underline;
 }
-button {
-    border-radius: 10%;
-    position: absolute;
-    bottom: -10px;
-}
 .information{
     background-color: rgba(52, 52, 52, 0);
     font-size: 30px;
     color: rgb(229, 226, 226);
-    height: auto;
-    width: 500px;
-    position: absolute;
     text-align: center;
-    margin-left: 90%;
-    margin-top: 37%;
+    margin-top: -3em;
 }
 li.planet-info{
     list-style-type: none;
@@ -49,43 +42,89 @@ li.planet-info{
 }
 .space {
     display: grid;
-    grid-template-columns: repeat(9, 100px [col-start]);
-    grid-template-rows: repeat(2, 0px [row-start]);
+    grid-template-columns: auto auto auto auto;
     color: white;
-    margin-top: 50px;
-    position: absolute;
-    opacity: .92;
+    align-items: center;
+    margin-top: 3em;
+}
+.planet{
+    border-radius: 50%;
+    position: relative;
 }
 #Jupiter {
-    grid-column: 1/ span 2;
-    /* border: 2px solid white; */
-    align-self: center;
-    margin: 600px 0px 0px 0px;
+    background: url('../images/flat_jupiter.jpg') repeat-x;
+    background-size: auto 100%;
+    height: 425px;
+    width: 425px;
+
+    -webkit-animation: move-map 9.925s infinite linear reverse rotate(3deg);
+    -moz-animation: move-map 9.925s infinite linear reverse rotate(3deg);
+    -o-animation: move-map 9.925s infinite linear reverse rotate(3deg);
+    -ms-animation: move-map 9.925s infinite linear reverse rotate(3deg);
+    
+    transform: rotate(3deg);
+    -webkit-transform: rotate(3deg);
+  
+  
+    animation: move-map 9.925s infinite linear;
+
 }
 #Saturn {
-    grid-column: 3/ span 2;
-    /* border: 2px solid white; */
-    align-self: center;
-    margin: 350px 200px 0px 450px;
+    background: url('../images/flat_saturn.jpg') repeat-x;
+    background-size: auto 100%;
+    height: 341px;
+    width: 341px;
+
+    -webkit-animation: move-map 10.656s infinite linear reverse rotate(27deg);
+    -moz-animation: move-map 10.656s infinite linear reverse rotate(27deg);
+    -o-animation: move-map 10.656s infinite linear reverse rotate(27deg);
+    -ms-animation: move-map 10.656s infinite linear reverse rotate(27deg);
+    
+    transform: rotate(27deg);
+    -webkit-transform: rotate(27deg);
+  
+  
+    animation: move-map 10.656s infinite linear;
 }
 #Uranus {
-    grid-column: 5/ span 2;
-    /* border: 2px solid white; */
-    align-self: right;
-    margin: -75px 0px 0px 800px;
+    background: url('../images/flat_uranus.jpg') repeat-x;
+    background-size: auto 100%;
+    height: 116px;
+    width: 116px;
+
+    -webkit-animation: move-map 17.24s infinite linear reverse rotate(98deg);
+    -moz-animation: move-map 17.24s infinite linear reverse rotate(98deg);
+    -o-animation: move-map 17.24s infinite linear reverse rotate(98deg);
+    -ms-animation: move-map 17.24s infinite linear reverse rotate(98deg);
+    
+    transform: rotate(98deg);
+    -webkit-transform: rotate(98deg);
+  
+  
+    animation: move-map 17.24s infinite linear;
 }
 #Neptune{
-    grid-column: 7/span 2;
-    /* border: 2px solid white; */
-    align-self: center;
-    margin: 100px 0px 20px 1000px;
+    background: url('../images/flat_neptune.jpeg') repeat-x;
+    background-size: auto 100%;
+    height: 101px;
+    width: 101px;
+
+    -webkit-animation: move-map 16.11s infinite linear reverse rotate(30deg);
+    -moz-animation: move-map 16.11s infinite linear reverse rotate(30deg);
+    -o-animation: move-map 16.11s infinite linear reverse rotate(30deg);
+    -ms-animation: move-map 16.11s infinite linear reverse rotate(30deg);
+    
+    transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+  
+  
+    animation: move-map 16.11s infinite linear;
 }
 .star {
     height: 2px;
     width: 2px;
     position: absolute;
     border-radius: 100%;
-    /* border: 2px solid rgb(34, 29, 29); */
     background-color: rgba(138, 138, 138, 0.26);
     opacity: .5;
 
@@ -102,6 +141,45 @@ li.planet-info{
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
 }
+
+@-moz-keyframes move-map {
+    0% {
+      background-position: -849px 0; }
+  
+    100% {
+      background-position: 0 0; } }
+  
+  @-webkit-keyframes move-map {
+    0% {
+      background-position: 0 0; }
+    100% {
+      background-position: -849px 0; }
+  }
+  
+  
+  @-o-keyframes move-map {
+    0% {
+      background-position: -849px 0; }
+  
+    100% {
+      background-position: 0 0; } }
+  
+  @-ms-keyframes move-map {
+    0% {
+      background-position: -849px 0; }
+  
+    100% {
+      background-position: 0 0; } }
+  
+  @keyframes move-map {
+    0% {
+      background-position: -849px 0; }
+  
+    100% {
+      background-position: 0 0; } }
+  
+
+
 @-webkit-keyframes blink {
     0% {background-color: rgba(138, 138, 138, 0.315);}
     50% {background-color: rgba(255, 255, 255, 0.938);}
@@ -109,3 +187,10 @@ li.planet-info{
 }
 
 
+.animation-button {
+  width: 7em;
+  height: 3em;
+  position: fixed;
+  border-radius: 10%;
+
+}   

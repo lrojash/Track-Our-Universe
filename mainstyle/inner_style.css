@@ -1,10 +1,12 @@
 body {
     color: rgb(190, 187, 187);
-    height: 100vh;
+    height: 120vh;
     width: auto;
     background-image: url("../images/galaxy.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
 }
 h1 {
     color: rgb(241, 241, 241);
@@ -55,11 +57,7 @@ li.planet-info{
     opacity: .5;
 
 }
-button {
-    border-radius: 10%;
-    position: absolute;
-    bottom: 0px;
-}
+
 .stars {
   height: 2px;
   width: 1.5px;
@@ -105,10 +103,10 @@ button {
   width: 280px;
 
 
-  -webkit-animation: move-map2 140.76s infinite linear reverse rotate(.1deg);
-  -moz-animation: move-map2 140.76s infinite linear reverse rotate(.1deg);
-  -o-animation: move-map2 140.766s infinite linear reverse rotate(.1deg);
-  -ms-animation: move-map2 140.76s infinite linear reverse rotate(.1deg);
+  -webkit-animation: move-map 140.76s infinite linear reverse rotate(.1deg);
+  -moz-animation: move-map 140.76s infinite linear reverse rotate(.1deg);
+  -o-animation: move-map 140.766s infinite linear reverse rotate(.1deg);
+  -ms-animation: move-map 140.76s infinite linear reverse rotate(.1deg);
   
   transform: rotate(.1deg);
   -webkit-transform: rotate(.1deg);
@@ -123,10 +121,10 @@ button {
   width: 260px;
 
 
-  -webkit-animation: move-map2 583.25s infinite linear reverse rotate(177deg);
-  -moz-animation: move-map2 583.25s infinite linear reverse rotate(177deg);
-  -o-animation: move-map2 583.25s infinite linear reverse rotate(177deg);
-  -ms-animation: move-map2 583.25s infinite linear reverse rotate(177deg);
+  -webkit-animation: move-map 583.25s infinite linear reverse rotate(177deg);
+  -moz-animation: move-map 583.25s infinite linear reverse rotate(177deg);
+  -o-animation: move-map 583.25s infinite linear reverse rotate(177deg);
+  -ms-animation: move-map 583.25s infinite linear reverse rotate(177deg);
   
   transform: rotate(177deg);
   -webkit-transform: rotate(177deg);
@@ -144,10 +142,10 @@ button {
   width: 280px;
 
 
-  -webkit-animation: move-map2 23.9345s infinite linear reverse rotate(23deg);
-  -moz-animation: move-map2 23.9345s infinite linear reverse rotate(23deg);
-  -o-animation: move-map2 23.9345s infinite linear reverse rotate(23deg);
-  -ms-animation: move-map2 23.9345s infinite linear reverse rotate(23deg);
+  -webkit-animation: move-map 23.9345s infinite linear reverse rotate(23deg);
+  -moz-animation: move-map 23.9345s infinite linear reverse rotate(23deg);
+  -o-animation: move-map 23.9345s infinite linear reverse rotate(23deg);
+  -ms-animation: move-map 23.9345s infinite linear reverse rotate(23deg);
   
   transform: rotate(23deg);
   -webkit-transform: rotate(23deg);
@@ -162,10 +160,10 @@ button {
   width: 140px;
 
 
-  -webkit-animation: move-map2 24.6229s infinite linear reverse rotate(25deg);
-  -moz-animation: move-map2 24.6229s infinite linear reverse rotate(25deg);
-  -o-animation: move-map2 24.6229s infinite linear reverse rotate(25deg);
-  -ms-animation: move-map2 24.6229s infinite linear reverse rotate(25deg);
+  -webkit-animation: move-map 24.6229s infinite linear reverse rotate(25deg);
+  -moz-animation: move-map 24.6229s infinite linear reverse rotate(25deg);
+  -o-animation: move-map 24.6229s infinite linear reverse rotate(25deg);
+  -ms-animation: move-map 24.6229s infinite linear reverse rotate(25deg);
   
   transform: rotate(25deg);
   -webkit-transform: rotate(25deg);
@@ -216,3 +214,10 @@ button {
     50% {background-color: rgba(255, 255, 255, 0.938);}
     100% {background-color: rgba(255, 255, 255, 0.315);}
 }
+.animation-button {
+  width: 7em;
+  height: 3em;
+  position: fixed;
+  border-radius: 10%;
+
+}   
